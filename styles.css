@@ -2060,6 +2060,12 @@ h3 {
   }
 }
 
+@media (max-width: 1000px) {
+  .site-nav {
+    display: none;
+  }
+}
+
 @media (max-width: 860px) {
   .wrap {
     width: min(var(--wrap), calc(100% - 40px));
