@@ -4,7 +4,7 @@ A static, guided tour of the UBC FRESH Lab's open forest modelling stack:
 **WS4**, **FHOPS**, the **FRESH Urban Forest Lab**, **Brushline**,
 **fresh-fvsbc**, **FRESH Fire Studio**, and the packages that make them reproducible.
 
-One tab per package. Each tab answers “what is this?”, “why should I care?”, and
+One tab per project. Each tab answers “what is this?”, “why should I care?”, and
 links to the live demo, docs, and repository where they exist.
 
 ## Run it

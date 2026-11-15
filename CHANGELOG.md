@@ -15,6 +15,9 @@
 - Added `serve.py`, `start.sh`, `stop.sh`, and a systemd unit.
 - Added the internal link checker, the screenshot refresh tool, and CI.
 - Added field notes, `robots.txt`, `sitemap.xml`, and print styles.
+- Verified the fresh-vdyp and fresh-tipsy web apps locally; kept their labelled
+  schematics because the current VDYP page is a raw JSON view and the tipsy
+  catalog is a one-table synthetic fixture.
 
 ## 2026-11-14 — initial portal
 
