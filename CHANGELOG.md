@@ -18,6 +18,8 @@
 - Verified the fresh-vdyp and fresh-tipsy web apps locally; kept their labelled
   schematics because the current VDYP page is a raw JSON view and the tipsy
   catalog is a one-table synthetic fixture.
+- Confirmed the production host is fronted by Cloudflare Access with a Globus
+  login; the copy now names CWL or Globus rather than assuming CWL only.
 - External link audit on 2026-11-15: all referenced docs, repositories, and
   demo hosts were reachable (Cloudflare Access redirects count); Nemora
   recovered to HTTP 200. The live-demo section carries the check date.

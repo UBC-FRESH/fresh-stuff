@@ -168,8 +168,8 @@ manual because lab-hosted demos can pause behind Cloudflare Access.
 - **Deep links work.** Every project has a hash URL (`#ws4`, `#femic`, …).
 - **The screenshots are real.** Where a package has no usable web interface,
   the panel uses a labelled schematic rather than a fake screenshot.
-- **Lab-hosted demos may be behind UBC Cloudflare Access / CWL.** The portal
-  says so rather than implying everything is public.
+- **Lab-hosted demos may be behind UBC Cloudflare Access (CWL or Globus).** The
+  portal says so rather than implying everything is public.
 
 ## Credit
 
