@@ -1,0 +1,4 @@
+# Tooling only; the portal is a static site and has no Python package.
+[tool.ruff]
+line-length = 100
+target-version = "py311"

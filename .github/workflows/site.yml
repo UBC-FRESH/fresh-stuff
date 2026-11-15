@@ -19,6 +19,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
+      - name: Install linter
+        run: python -m pip install ruff
+      - name: Lint Python
+        run: |
+          ruff check serve.py tools
+          ruff format --check serve.py tools
       - name: Check Python syntax
         run: python -m compileall -q serve.py tools
       - name: Check JavaScript syntax

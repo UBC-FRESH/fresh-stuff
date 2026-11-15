@@ -10,7 +10,6 @@ from __future__ import annotations
 
 import argparse
 import re
-import sys
 import urllib.error
 import urllib.request
 from html.parser import HTMLParser

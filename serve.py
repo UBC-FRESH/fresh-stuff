@@ -36,7 +36,7 @@ PRIVATE_PATHS = {
     "/.gitignore",
     "/README.md",
 }
-PRIVATE_PREFIXES = ("/deploy/",)
+PRIVATE_PREFIXES = ("/deploy/", "/tools/")
 
 mimetypes.add_type("image/webp", ".webp")
 mimetypes.add_type("font/woff2", ".woff2")
@@ -52,7 +52,7 @@ class PortalHandler(SimpleHTTPRequestHandler):
     def __init__(self, *args: object, **kwargs: object) -> None:
         super().__init__(*args, directory=str(ROOT), **kwargs)  # type: ignore[arg-type]
 
-    def do_GET(self) -> None:  # noqa: N802 (stdlib naming)
+    def do_GET(self) -> None:
         path = urlsplit(self.path).path
         if path == "/healthz":
             payload = {
@@ -80,13 +80,13 @@ class PortalHandler(SimpleHTTPRequestHandler):
             return
         super().do_GET()
 
-    def list_directory(self, path: str) -> None:  # noqa: ARG002
+    def list_directory(self, path: str) -> None:
         """Do not expose directory listings."""
         self.send_error(HTTPStatus.NOT_FOUND, "Not found")
 
     def end_headers(self) -> None:
         path = urlsplit(self.path).path
-        if path.startswith("/assets/") or path.startswith("/demos/"):
+        if path.startswith(("/assets/", "/demos/")):
             self.send_header("Cache-Control", "public, max-age=86400")
         else:
             self.send_header("Cache-Control", "no-cache")
@@ -95,7 +95,7 @@ class PortalHandler(SimpleHTTPRequestHandler):
         super().end_headers()
 
     def log_message(self, fmt: str, *args: object) -> None:
-        sys.stderr.write("[fresh-stuff] %s - %s\n" % (self.address_string(), fmt % args))
+        sys.stderr.write(f"[fresh-stuff] {self.address_string()} - {fmt % args}\n")
 
 
 class PortalServer(ThreadingHTTPServer):

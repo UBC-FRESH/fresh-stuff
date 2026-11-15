@@ -18,7 +18,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import sys
 from pathlib import Path
 from typing import Any
 
@@ -55,8 +54,8 @@ def apply_actions(page: Any, actions: list[dict[str, Any]]) -> None:
 
 
 def capture(targets: dict[str, Any], *, only: set[str], png_dir: Path, webp_dir: Path) -> int:
-    from playwright.sync_api import sync_playwright
     from PIL import Image
+    from playwright.sync_api import sync_playwright
 
     defaults = targets.get("defaults", {})
     width, height = defaults.get("viewport", [1600, 1000])
@@ -65,7 +64,9 @@ def capture(targets: dict[str, Any], *, only: set[str], png_dir: Path, webp_dir:
     failures: list[str] = []
     with sync_playwright() as pw:
         browser = pw.chromium.launch()
-        page = browser.new_page(viewport={"width": int(width), "height": int(height)}, device_scale_factor=1)
+        page = browser.new_page(
+            viewport={"width": int(width), "height": int(height)}, device_scale_factor=1
+        )
         for target in targets["targets"]:
             name = target["name"]
             if only and name not in only:
@@ -82,7 +83,9 @@ def capture(targets: dict[str, Any], *, only: set[str], png_dir: Path, webp_dir:
                     page.screenshot(path=str(png_dir / f"{name}.png"))
                 image = Image.open(png_dir / f"{name}.png").convert("RGB")
                 if image.width > 1600:
-                    image = image.resize((1600, round(image.height * 1600 / image.width)), Image.LANCZOS)
+                    image = image.resize(
+                        (1600, round(image.height * 1600 / image.width)), Image.LANCZOS
+                    )
                 image.save(webp_dir / f"{name}.webp", "WEBP", quality=82, method=6)
                 print(f"  wrote {png_dir / (name + '.png')} and {webp_dir / (name + '.webp')}")
             except Exception as exc:  # noqa: BLE001
