@@ -1,0 +1,24 @@
+@font-face{font-family:"Alegreya";src:url("../../assets/fonts/alegreya-v13-latin-regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Alegreya";src:url("../../assets/fonts/alegreya-v13-latin-700.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+:root{--paper:#f4f1e8;--card:#fbf9f2;--ink:#12241a;--muted:#5d6d62;--pine:#2f6b4b;--moss:#7db896;--line:rgba(18,36,26,.14);--sans:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;--serif:"Alegreya",Georgia,serif;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6;padding:0 0 4rem}
+.fresh-bar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 28px;background:#0d2419;color:#dbe8de;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;position:sticky;top:0;z-index:10}
+.fresh-bar a{color:#cfe9d8;text-decoration:none;border-bottom:1px solid transparent}
+.fresh-bar a:hover{border-bottom-color:#7db896}
+.fresh-bar .bar-mid{color:#8fae99;letter-spacing:.16em}
+.page{max-width:1060px;margin:0 auto;padding:2.2rem 28px 0}
+h1{font-family:var(--serif);font-size:clamp(2.4rem,5vw,4rem);line-height:1.02;letter-spacing:-.02em;margin:.4rem 0 .6rem}
+h2{font-family:var(--serif);font-size:1.5rem;line-height:1.1;margin:0 0 .5rem}
+a{color:var(--pine)}
+p{color:var(--muted)}
+.card{border:1px solid var(--line);border-radius:14px;padding:1.1rem 1.2rem;margin:1rem 0;background:var(--card);box-shadow:0 18px 44px -32px rgba(13,36,25,.3)}
+.card p:last-child{margin-bottom:0}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+td,th{border-bottom:1px solid rgba(18,36,26,.08);padding:.45rem .4rem;text-align:left}
+th{font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.caveat{color:#6b4d18;background:#fff7df;padding:.6rem .8rem;border-radius:8px;font-size:.85rem}
+canvas{background:#dfe9df;border-radius:10px;width:100%;max-width:900px}
+ul{padding-left:1.1rem}li{margin:.2rem 0;color:var(--ink)}
+button{font:inherit;background:var(--pine);color:#fff;border:0;border-radius:999px;padding:.55rem 1rem;cursor:pointer}
+@media(max-width:700px){.fresh-bar{font-size:8px;padding:10px 14px;gap:8px}.bar-mid{display:none}.page{padding:1.4rem 16px 0}}

@@ -1,0 +1,25 @@
+[Unit]
+Description=FRESH stuff portal (static UBC FRESH project tour)
+Documentation=file:///opt/fresh-stuff/README.md
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=gep
+Group=gep
+WorkingDirectory=/opt/fresh-stuff
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/usr/bin/python3 serve.py --host 0.0.0.0 --port 8130
+Restart=always
+RestartSec=2
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadOnlyPaths=/opt/fresh-stuff
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

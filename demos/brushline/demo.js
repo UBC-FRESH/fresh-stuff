@@ -1,0 +1,1 @@
+const canvas=document.getElementById('demo-scene');if(canvas){const c=canvas.getContext('2d');let post=false;function draw(){c.fillStyle='#dfe9df';c.fillRect(0,0,800,220);for(let i=0;i<5;i++){let h=post?35+i*8:70+i*14;c.fillStyle=post?'#b67b4a':'#3d7a4f';c.fillRect(80+i*140,190-h,60,h)}}document.getElementById('variant').onclick=()=>{post=!post;draw()};draw()}

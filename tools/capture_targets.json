@@ -1,0 +1,71 @@
+{
+  "defaults": {
+    "viewport": [1600, 1000],
+    "wait_ms": 2500
+  },
+  "targets": [
+    {
+      "name": "ws4",
+      "url": "http://127.0.0.1:8794/",
+      "wait_ms": 3500,
+      "note": "WS4 instance UI (map view)."
+    },
+    {
+      "name": "fhops",
+      "url": "http://127.0.0.1:8877/",
+      "wait_ms": 2500,
+      "actions": [
+        { "type": "select", "selector": "#run", "value": "tfl6" },
+        { "type": "click_role", "role": "tab", "name": "Plan workspace" },
+        { "type": "wait", "ms": 2500 }
+      ],
+      "note": "FHOPS with a solved run; adjust the run value for your local fixture."
+    },
+    {
+      "name": "urban",
+      "url": "http://127.0.0.1:8101/vancouver/",
+      "wait_ms": 5000,
+      "note": "Urban Forest Lab, full Vancouver pilot."
+    },
+    {
+      "name": "fvsbc",
+      "url": "http://127.0.0.1:8766/",
+      "wait_ms": 2500,
+      "actions": [
+        { "type": "select", "selector": "#run-select", "value": "ct60" },
+        { "type": "wait", "ms": 3000 },
+        { "type": "click", "selector": "#workspace-nav button", "text": "Results" },
+        { "type": "wait", "ms": 2500 }
+      ],
+      "note": "fresh-fvsbc with the ct60 run; adjust the run value."
+    },
+    {
+      "name": "hectares",
+      "url": "http://127.0.0.1:8023/web/",
+      "wait_ms": 3000,
+      "actions": [
+        { "type": "click", "selector": "#tab-map" },
+        { "type": "wait", "ms": 5000 }
+      ],
+      "note": "HectaresBC browser, map tab. Start scripts/serve_web_app.py first."
+    },
+    {
+      "name": "woodlots",
+      "url": "http://127.0.0.1:8795/",
+      "wait_ms": 4500,
+      "note": "Woodlots BC portal."
+    },
+    {
+      "name": "community",
+      "url": "http://127.0.0.1:8796/",
+      "wait_ms": 4000,
+      "note": "Community Forests portal."
+    },
+    {
+      "name": "fire",
+      "url": "http://127.0.0.1:8800/",
+      "wait_ms": 3500,
+      "note": "FRESH Fire Studio landing page."
+    }
+  ]
+}

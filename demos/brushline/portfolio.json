@@ -1,0 +1,247 @@
+[
+  {
+    "schema_version": "brushline.demo.v1",
+    "id": "synthetic-corridor",
+    "title": "Synthetic corridor",
+    "sector": "utility",
+    "region": "British Columbia",
+    "aoi": "aoi.geojson",
+    "question": "What does a risk-ranked treatment plan look like on a small synthetic corridor?",
+    "data_sources": [
+      {
+        "name": "Synthetic corridor fixture",
+        "licence": "CC0-1.0",
+        "version": "1.0",
+        "url": ""
+      }
+    ],
+    "scenarios": [
+      "baseline",
+      "risk-first"
+    ],
+    "artifacts": {
+      "run": "run.json",
+      "plan": "plan.json",
+      "reports": "reports",
+      "pareto": "pareto.json",
+      "timeline": "operations_timeline.jsonl"
+    },
+    "headline_metrics": [
+      {
+        "name": "present_cost",
+        "value": 5300.0,
+        "unit": "CAD"
+      },
+      {
+        "name": "service_risk",
+        "value": 0.12,
+        "unit": "index"
+      }
+    ],
+    "caveats": [
+      "Synthetic geometry and synthetic costs; not an operational plan.",
+      "The display is a context view, not a survey or safety certification.",
+      "Demo narrative 1 uses the same synthetic evidence base."
+    ],
+    "pilot": "pilot.md",
+    "status": "published",
+    "created_utc": "2026-11-14T00:00:00Z",
+    "contact": "pilot@example.org"
+  },
+  {
+    "schema_version": "brushline.demo.v1",
+    "id": "utility-risk-first",
+    "title": "Utility risk-first",
+    "sector": "utility",
+    "region": "British Columbia",
+    "aoi": "aoi.geojson",
+    "question": "How does a risk-first budget change the service and cost trade-off?",
+    "data_sources": [
+      {
+        "name": "Synthetic corridor fixture",
+        "licence": "CC0-1.0",
+        "version": "1.0",
+        "url": ""
+      }
+    ],
+    "scenarios": [
+      "baseline",
+      "risk-first"
+    ],
+    "artifacts": {
+      "run": "run.json",
+      "plan": "plan.json",
+      "reports": "reports",
+      "pareto": "pareto.json",
+      "timeline": "operations_timeline.jsonl"
+    },
+    "headline_metrics": [
+      {
+        "name": "present_cost",
+        "value": 4700.0,
+        "unit": "CAD"
+      },
+      {
+        "name": "service_risk",
+        "value": 0.16,
+        "unit": "index"
+      }
+    ],
+    "caveats": [
+      "Synthetic geometry and synthetic costs; not an operational plan.",
+      "The display is a context view, not a survey or safety certification.",
+      "Demo narrative 2 uses the same synthetic evidence base."
+    ],
+    "pilot": "pilot.md",
+    "status": "published",
+    "created_utc": "2026-11-14T00:00:00Z",
+    "contact": "pilot@example.org"
+  },
+  {
+    "schema_version": "brushline.demo.v1",
+    "id": "pipeline-access",
+    "title": "Pipeline access",
+    "sector": "pipeline",
+    "region": "Alberta",
+    "aoi": "aoi.geojson",
+    "question": "Where does access constrain a treatment plan on a linear corridor?",
+    "data_sources": [
+      {
+        "name": "Synthetic corridor fixture",
+        "licence": "CC0-1.0",
+        "version": "1.0",
+        "url": ""
+      }
+    ],
+    "scenarios": [
+      "baseline",
+      "risk-first"
+    ],
+    "artifacts": {
+      "run": "run.json",
+      "plan": "plan.json",
+      "reports": "reports",
+      "pareto": "pareto.json",
+      "timeline": "operations_timeline.jsonl"
+    },
+    "headline_metrics": [
+      {
+        "name": "present_cost",
+        "value": 5100.0,
+        "unit": "CAD"
+      },
+      {
+        "name": "service_risk",
+        "value": 0.18,
+        "unit": "index"
+      }
+    ],
+    "caveats": [
+      "Synthetic geometry and synthetic costs; not an operational plan.",
+      "The display is a context view, not a survey or safety certification.",
+      "Demo narrative 3 uses the same synthetic evidence base."
+    ],
+    "pilot": "pilot.md",
+    "status": "published",
+    "created_utc": "2026-11-14T00:00:00Z",
+    "contact": "pilot@example.org"
+  },
+  {
+    "schema_version": "brushline.demo.v1",
+    "id": "rail-season",
+    "title": "Rail season",
+    "sector": "railway",
+    "region": "British Columbia",
+    "aoi": "aoi.geojson",
+    "question": "How does a seasonal window change treatment timing and cost?",
+    "data_sources": [
+      {
+        "name": "Synthetic corridor fixture",
+        "licence": "CC0-1.0",
+        "version": "1.0",
+        "url": ""
+      }
+    ],
+    "scenarios": [
+      "baseline",
+      "risk-first"
+    ],
+    "artifacts": {
+      "run": "run.json",
+      "plan": "plan.json",
+      "reports": "reports",
+      "pareto": "pareto.json",
+      "timeline": "operations_timeline.jsonl"
+    },
+    "headline_metrics": [
+      {
+        "name": "present_cost",
+        "value": 4900.0,
+        "unit": "CAD"
+      },
+      {
+        "name": "service_risk",
+        "value": 0.14,
+        "unit": "index"
+      }
+    ],
+    "caveats": [
+      "Synthetic geometry and synthetic costs; not an operational plan.",
+      "The display is a context view, not a survey or safety certification.",
+      "Demo narrative 4 uses the same synthetic evidence base."
+    ],
+    "pilot": "pilot.md",
+    "status": "published",
+    "created_utc": "2026-11-14T00:00:00Z",
+    "contact": "pilot@example.org"
+  },
+  {
+    "schema_version": "brushline.demo.v1",
+    "id": "roadside-priority",
+    "title": "Roadside priority",
+    "sector": "road",
+    "region": "British Columbia",
+    "aoi": "aoi.geojson",
+    "question": "Which segments should a roadside program treat first under a fixed budget?",
+    "data_sources": [
+      {
+        "name": "Synthetic corridor fixture",
+        "licence": "CC0-1.0",
+        "version": "1.0",
+        "url": ""
+      }
+    ],
+    "scenarios": [
+      "baseline",
+      "risk-first"
+    ],
+    "artifacts": {
+      "run": "run.json",
+      "plan": "plan.json",
+      "reports": "reports",
+      "pareto": "pareto.json",
+      "timeline": "operations_timeline.jsonl"
+    },
+    "headline_metrics": [
+      {
+        "name": "present_cost",
+        "value": 4300.0,
+        "unit": "CAD"
+      },
+      {
+        "name": "service_risk",
+        "value": 0.22,
+        "unit": "index"
+      }
+    ],
+    "caveats": [
+      "Synthetic geometry and synthetic costs; not an operational plan.",
+      "The display is a context view, not a survey or safety certification.",
+      "Demo narrative 5 uses the same synthetic evidence base."
+    ],
+    "pilot": "pilot.md",
+    "status": "published",
+    "created_utc": "2026-11-14T00:00:00Z",
+    "contact": "pilot@example.org"
+  }
+]

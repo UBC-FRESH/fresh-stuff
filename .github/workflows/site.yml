@@ -1,0 +1,40 @@
+name: site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Check Python syntax
+        run: python -m compileall -q serve.py tools
+      - name: Check JavaScript syntax
+        run: |
+          node --check app.js
+          node --check data.js
+      - name: Check local links and assets
+        run: python tools/check_links.py
+      - name: Validate capture targets
+        run: python -c "import json; json.load(open('tools/capture_targets.json'))"
+      - name: Smoke test the server
+        run: |
+          python serve.py --host 127.0.0.1 --port 8130 &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID' EXIT
+          sleep 1
+          curl -fsS http://127.0.0.1:8130/healthz
+          curl -fsS http://127.0.0.1:8130/ > /dev/null
+          curl -fsS http://127.0.0.1:8130/sitemap.xml > /dev/null
