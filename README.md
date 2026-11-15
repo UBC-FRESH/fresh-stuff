@@ -1,5 +1,7 @@
 # FRESH stuff
 
+[![site](https://github.com/UBC-FRESH/fresh-stuff/actions/workflows/site.yml/badge.svg)](https://github.com/UBC-FRESH/fresh-stuff/actions/workflows/site.yml)
+
 A static, guided tour of the UBC FRESH Lab's open forest modelling stack:
 **WS4**, **FHOPS**, the **FRESH Urban Forest Lab**, **Brushline**,
 **fresh-fvsbc**, **FRESH Fire Studio**, and the packages that make them reproducible.
