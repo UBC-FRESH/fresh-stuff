@@ -18,8 +18,9 @@
 - Verified the fresh-vdyp and fresh-tipsy web apps locally; kept their labelled
   schematics because the current VDYP page is a raw JSON view and the tipsy
   catalog is a one-table synthetic fixture.
-- Confirmed the production host is fronted by Cloudflare Access with a Globus
-  login; the copy now names CWL or Globus rather than assuming CWL only.
+- The portal is public at <https://fresh-stuff.01101.dev>. The site needs no
+  login; individual lab-hosted demos may still sit behind Cloudflare Access
+  (CWL or Globus).
 - External link audit on 2026-11-15: all referenced docs, repositories, and
   demo hosts were reachable (Cloudflare Access redirects count); Nemora
   recovered to HTTP 200. The live-demo section carries the check date.

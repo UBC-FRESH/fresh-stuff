@@ -4,6 +4,9 @@ A static, guided tour of the UBC FRESH Lab's open forest modelling stack:
 **WS4**, **FHOPS**, the **FRESH Urban Forest Lab**, **Brushline**,
 **fresh-fvsbc**, **FRESH Fire Studio**, and the packages that make them reproducible.
 
+**Public:** <https://fresh-stuff.01101.dev>. The portal needs no login; some
+lab-hosted demo links may still sit behind UBC Cloudflare Access (CWL or Globus).
+
 One tab per project. Each tab answers “what is this?”, “why should I care?”, and
 links to the live demo, docs, and repository where they exist.
 
@@ -169,7 +172,7 @@ manual because lab-hosted demos can pause behind Cloudflare Access.
 - **The screenshots are real.** Where a package has no usable web interface,
   the panel uses a labelled schematic rather than a fake screenshot.
 - **Lab-hosted demos may be behind UBC Cloudflare Access (CWL or Globus).** The
-  portal says so rather than implying everything is public.
+  public portal says so rather than implying every link is open.
 
 ## Credit
 
