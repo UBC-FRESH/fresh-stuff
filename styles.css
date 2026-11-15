@@ -1665,10 +1665,20 @@ h3 {
 .live-note {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
   margin-top: 22px;
   font-size: 0.78rem;
   color: var(--muted);
+}
+.live-verified {
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  white-space: nowrap;
 }
 
 /* About + long tail ------------------------------------------------------- */
