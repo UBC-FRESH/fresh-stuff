@@ -23,6 +23,7 @@ paused; review warnings rather than treating every non-200 as a site failure.
 ```bash
 python3 -m pip install playwright pillow
 playwright install chromium
+python3 tools/refresh_screenshots.py --dry-run
 python3 tools/refresh_screenshots.py --only ws4,fire
 ```
 

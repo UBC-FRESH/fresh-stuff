@@ -34,7 +34,9 @@ jobs:
       - name: Check local links and assets
         run: python tools/check_links.py
       - name: Validate capture targets
-        run: python -c "import json; json.load(open('tools/capture_targets.json'))"
+        run: |
+          python -c "import json; json.load(open('tools/capture_targets.json'))"
+          python tools/refresh_screenshots.py --dry-run
       - name: Smoke test the server
         run: |
           python serve.py --host 127.0.0.1 --port 8130 &

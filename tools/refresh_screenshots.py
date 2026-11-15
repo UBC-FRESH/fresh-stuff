@@ -106,6 +106,7 @@ def main() -> int:
     parser.add_argument("--out", type=Path, default=DEFAULT_PNG, help="Raw PNG directory.")
     parser.add_argument("--webp", type=Path, default=DEFAULT_WEBP, help="WebP destination.")
     parser.add_argument("--only", default="", help="Comma-separated target names.")
+    parser.add_argument("--dry-run", action="store_true", help="Print targets without capturing.")
     args = parser.parse_args()
     try:
         targets = load_targets(args.targets)
@@ -113,6 +114,12 @@ def main() -> int:
         print(f"could not read {args.targets}: {exc}")
         return 2
     only = {part.strip() for part in args.only.split(",") if part.strip()}
+    if args.dry_run:
+        for target in targets["targets"]:
+            if only and target["name"] not in only:
+                continue
+            print(f"{target['name']:12s} {target['url']}")
+        return 0
     try:
         return capture(targets, only=only, png_dir=args.out, webp_dir=args.webp)
     except ImportError:
